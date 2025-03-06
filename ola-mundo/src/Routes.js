@@ -13,7 +13,7 @@ function AppRoutes() {
 
         <Routes>
             <Route path="/" element={<PaginaPadrao/>}>
-                <Route path="/" element={<Inicio/>}/>
+                <Route index element={<Inicio/>}/>
                 <Route path="/sobremim" element={<SobreMim/>}/>
             </Route>
             <Route path="*" element={<div>Erro 404</div>}/>
