@@ -1,4 +1,3 @@
-import Banner from "componentes/banner/banner.js"
 import styles from "./inicio.module.css"
 import posts from "json/posts.json"
 import Post from "componentes/post/post.js"
@@ -6,8 +5,6 @@ import Post from "componentes/post/post.js"
 
 function Inicio(){
     return(
-        <main>
-            <Banner/>
             <ul className={styles.posts}>
                 {posts.map( post =>{
                     return( 
@@ -17,7 +14,6 @@ function Inicio(){
                     )
                 })}
             </ul>
-        </main>
     )
 }
 
