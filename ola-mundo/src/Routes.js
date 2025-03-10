@@ -5,6 +5,7 @@ import SobreMim from "./paginas/sobremim/sobre-mim.js";
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import PaginaPadrao from "componentes/pagina-padrao/paginaPadrao.js";
 import Post from "paginas/post/post.js";
+import NaoEncontrada from "paginas/nao-encontrada/nao-encontrada.js";
 
 function AppRoutes() {
   return (
@@ -18,7 +19,7 @@ function AppRoutes() {
                 <Route path="sobremim" element={<SobreMim/>}/>
                 <Route path="posts/:id" element={<Post/>}/>
             </Route>
-            <Route path="*" element={<div>Erro 404</div>}/>
+            <Route path="*" element={<NaoEncontrada/>}/>
         </Routes>
 
         <Rodape/>
