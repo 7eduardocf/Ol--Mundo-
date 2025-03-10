@@ -1,7 +1,9 @@
-import styles from "paginas/post/post.module.css"
+import "paginas/post/post.css"
 import { useParams } from "react-router-dom"
 import posts from "json/posts.json"
 import PostModelo from "componentes/post-modelo/post-modelo"
+import ReactMarkdown from "react-markdown"
+
 function Post(){
     const paramentros = useParams()
 
@@ -9,13 +11,16 @@ function Post(){
         return post.id === Number(paramentros.id)
     })
     
-    const capas = require(`assets/posts/${post.id}/capa.png`)
+    const capas = require(`/public/imagens/${post.id}/capa.png`)
 
     console.log(post);
     return (
         <PostModelo fotoCapa={capas} titulo={post.titulo}>
-
-            Texto...
+            <div className="post-markdown-container">
+                <ReactMarkdown>
+                    {post.texto}
+                </ReactMarkdown>
+            </div>
         </PostModelo>
     )
 }

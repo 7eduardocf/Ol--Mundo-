@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./post.module.css"
 
 function PostCard({post}){
-    const capa = require(`../../assets/posts/${post.id}/capa.png`);
+    const capa = require(`/public/imagens/${post.id}/capa.png`);
     return (
         <Link to={`/posts/${post.id}`}>
             <div className={styles.post}>
