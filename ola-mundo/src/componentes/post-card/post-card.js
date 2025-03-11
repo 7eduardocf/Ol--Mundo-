@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./post.module.css"
+import BotaoPrincipal from "../botao-principal/botao-principal.js"
+
 
 function PostCard({post}){
     const capa = require(`/public/imagens/${post.id}/capa.png`);
@@ -10,7 +12,9 @@ function PostCard({post}){
                 
                 <h2 className={styles.titulo}>{post.titulo}</h2>
 
-                <button className={styles.botaoLer}>Ler</button>
+                <BotaoPrincipal>
+                    Ler
+                </BotaoPrincipal>
             </div>
         </Link>
     )
