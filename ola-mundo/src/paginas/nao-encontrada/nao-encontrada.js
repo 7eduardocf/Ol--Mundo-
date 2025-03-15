@@ -6,6 +6,9 @@ import { useNavigate } from "react-router-dom"
 function NaoEncontrada(){
     
     const navegar = useNavigate()
+
+
+
     return(
         <>
             <div className={styles.conteudoContainer}>
@@ -20,7 +23,7 @@ function NaoEncontrada(){
                 <p className={styles.paragrafo}>
                     Aguarde uns instantes e recarregue a página, ou volte para a página inicial.
                 </p>
-                <div className={styles.botaoContainer}>
+                <div className={styles.botaoContainer} onClick={() => navegar("/")}>
                     <BotaoPrincipal tamanho="lg">
                         Voltar
                     </BotaoPrincipal>
